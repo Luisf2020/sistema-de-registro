@@ -1,12 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de registro de juegos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Game Registry Dashboard - portafolio de desarrollo frontend de Luis Felipe Zuniga León" />
+  <title>Game Registry Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    
-    <script src="app.js"></script>
+  <main class="shell">
+    <header class="hero">
+      <div>
+        <span class="eyebrow">Portfolio Project · JavaScript</span>
+        <h1>Game Registry Dashboard</h1>
+        <p>Registro y seguimiento de videojuegos con persistencia local.</p>
+      </div>
+      <div class="status"><span></span> Local-first</div>
+    </header>
+
+    <section class="stats" aria-label="Resumen">
+      <article><strong id="totalGames">0</strong><span>Total</span></article>
+      <article><strong id="completedGames">0</strong><span>Completados</span></article>
+      <article><strong id="pendingGames">0</strong><span>Pendientes</span></article>
+    </section>
+
+    <section class="panel">
+      <div class="panel-heading">
+        <div><span class="eyebrow">Gestión</span><h2>Biblioteca personal</h2></div>
+        <input id="search" type="search" placeholder="Buscar por título o plataforma…" aria-label="Buscar juegos" />
+      </div>
+
+      <form id="gameForm" class="game-form">
+        <input id="title" placeholder="Título del videojuego" required maxlength="80" />
+        <input id="platform" placeholder="Plataforma" required maxlength="40" />
+        <select id="status" aria-label="Estado">
+          <option value="Pendiente">Pendiente</option>
+          <option value="En progreso">En progreso</option>
+          <option value="Completado">Completado</option>
+        </select>
+        <input id="score" type="number" min="0" max="10" step="0.1" placeholder="Puntuación 0-10" />
+        <button type="submit" id="submitBtn">Agregar juego</button>
+      </form>
+
+      <div id="emptyState" class="empty">No hay registros todavía. Agrega tu primer videojuego.</div>
+      <div id="gameList" class="cards" aria-live="polite"></div>
+    </section>
+
+    <footer>Desarrollado por <strong>Luis Felipe Zuniga León</strong> · Ingeniería de Sistemas</footer>
+  </main>
+  <script src="app.js"></script>
 </body>
 </html>
