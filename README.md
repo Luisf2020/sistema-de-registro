@@ -1,53 +1,74 @@
-# Game Registry Dashboard
+# Registro de videojuegos
 
-![HTML5](https://img.shields.io/badge/HTML5-Frontend-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-Responsive-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-Vanilla-F7DF1E?logo=javascript&logoColor=111)
-![Storage](https://img.shields.io/badge/Storage-localStorage-0f172a)
+![stack: HTML5](https://img.shields.io/badge/stack--HTML5-0d9488?style=flat-square) ![stack: CSS3](https://img.shields.io/badge/stack--CSS3-0d9488?style=flat-square) ![stack: JavaScript](https://img.shields.io/badge/stack--JavaScript-0d9488?style=flat-square) ![IA: asistido](https://img.shields.io/badge/IA--asistido-6366f1?style=flat-square) [![Demo](https://img.shields.io/badge/demo-en%20vivo-22c55e?style=flat-square)](https://luisf2020.github.io/sistema-de-registro/)
 
-Aplicación web de registro y seguimiento de videojuegos desarrollada con **HTML, CSS y JavaScript puro**. El proyecto demuestra manejo de estado en el navegador, operaciones CRUD, filtrado, validación y persistencia local sin dependencias externas.
+CRUD de una coleccion de videojuegos con busqueda, filtros y estadisticas, todo en el navegador.
 
-## Funcionalidades
+**Tipo:** Aplicacion web estatica · **Complejidad:** Principiante
 
-- Alta de videojuegos con plataforma, estado y puntuación.
-- Edición y eliminación de registros.
-- Búsqueda instantánea por título o plataforma.
-- Persistencia mediante `localStorage`.
-- Indicadores rápidos de total, completados y pendientes.
-- Interfaz responsive y accesible para escritorio y móvil.
-- Validación de formularios en el cliente.
+## Problema que resuelve
 
-## Arquitectura
+Organizar una coleccion personal y saber que titulos estan completados y cuales pendientes, sin instalar nada.
 
-```text
-sistema-de-registro/
-├── index.html      # Interfaz principal
-├── styles.css      # Diseño responsive
-├── app.js          # Estado, CRUD, filtros y localStorage
-├── contacto.html   # Información del proyecto
-└── README.md
+## Solucion implementada
+
+Formulario con alta/edicion/borrado, busqueda en vivo y contadores de estado; los datos se guardan en localStorage.
+
+### Funcionalidades principales
+
+- CRUD completo con edicion en linea
+- Busqueda y filtros por estado
+- Contadores de total, completados y pendientes
+- Pagina de contacto
+
+## Stack
+
+- HTML5
+- CSS3
+- JavaScript
+
+## Estructura
+
+```
+index.html      # listado y formulario
+contacto.html   # pagina de contacto
+app.js          # CRUD y estado
+styles.css
 ```
 
-## Ejecución
-
-No requiere instalación ni dependencias.
+## Puesta en marcha
 
 ```bash
-git clone https://github.com/Luisf2020/sistema-de-registro.git
-cd sistema-de-registro
+# Abrir index.html
+o:
+python3 -m http.server 8000
 ```
 
-Después abre `index.html` en el navegador o utiliza una extensión como **Live Server**.
+## Complejidad del proyecto
 
-## Objetivo técnico
+**Nivel: Principiante** — Aplicacion estatica con estado local; un unico modulo de logica.
 
-Proyecto orientado a demostrar fundamentos sólidos de frontend: manipulación del DOM, manejo de eventos, persistencia en cliente, diseño responsive y organización de lógica JavaScript.
+El nivel describe la complejidad tecnica del proyecto, no el grado de dominio de quien lo escribio.
+
+## Despliegue
+
+Demo en vivo: <https://luisf2020.github.io/sistema-de-registro/>  
+Publicado con GitHub Pages (rama `gh-pages`).
+
+## Transparencia sobre IA
+
+Este proyecto se desarrollo con asistencia de inteligencia artificial (generacion de codigo,
+revision y documentacion). El codigo fue leido, ejecutado y probado manualmente. No se declaran
+clientes, metricas ni resultados que no puedan verificarse.
 
 ## Autor
 
-**Luis Felipe Zuniga León**  
-Ingeniería de Sistemas · Desarrollo de Software · Full Stack
+**Luis Felipe Zuniga Leon** — Desarrollador de software asistido por IA
+
+- GitHub: <https://github.com/Luisf2020>
+- Correo: developerluis2@gmail.com
+- WhatsApp: +504 3237 0056
 
 ---
 
-> Proyecto de portafolio y aprendizaje técnico. Los datos se almacenan únicamente en el navegador del usuario.
+_Proyecto de portafolio. El desarrollo se apoyo en herramientas de IA bajo revision tecnica humana._
